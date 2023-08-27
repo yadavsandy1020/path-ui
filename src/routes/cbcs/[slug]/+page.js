@@ -5,9 +5,7 @@ export async function load({ params }) {
   // get list of cbcs from api
   try {
     const BASE_URL = import.meta.env.VITE_BASE_URL;
-    const cbcs = await fetchData(
-      BASE_URL + `/cbcs/${params.slug}/${params.page}`
-    );
+    const cbcs = await fetchData(BASE_URL + `/cbcs/${params.slug}`);
     return {
       body: {
         cbcs,
