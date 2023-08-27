@@ -6,7 +6,12 @@
 
 <div class="app">
 	<Header />
-
+	<div class="container">
+		<button class="btn btn-primary p-2 m-2" on:click={()=>window.location.href="/doctors"}>Doctors</button>
+		<button class="btn btn-primary p-2 m-2" on:click={()=>window.location.href="/patients"}>Patients</button>
+		<button class="btn btn-primary p-2 m-2" on:click={()=>window.location.href="/cbcs"}>Reports</button>
+		<button class="btn btn-primary p-2 m-2" on:click={()=> window.location.href="/cbcs/add"}>Add New CBC </button>
+	</div>
 	<main>
 		<slot />
 	</main>

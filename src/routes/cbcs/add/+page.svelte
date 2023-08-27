@@ -73,8 +73,8 @@
         }
        // post api call here to save data to db
         const res = await saveCbc(data);
-        console.log({res});
         handleReset();
+        window.location.href = "/cbcs";
     }
 
     function handleCancel() {
