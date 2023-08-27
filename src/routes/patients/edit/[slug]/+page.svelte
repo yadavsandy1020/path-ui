@@ -18,7 +18,7 @@
 
     // create function to update patient data
     async function savePatient(patientData){
-      const BASE_URL= process.env.BASE_URL;
+      const BASE_URL= import.meta.env.VITE_BASE_URL;
       const res = await fetch(`${BASE_URL}/patients/${data.body.patient._id}`, {
         method: "PUT",
         headers: {

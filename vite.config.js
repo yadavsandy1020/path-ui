@@ -7,6 +7,6 @@ export default defineConfig({
     sourcemap: false, // Ensure sourcemap is set to false
   },
   server: {
-    port: 8080,
+    port: 8081,
   },
 });

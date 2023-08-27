@@ -20,7 +20,7 @@
     // save doctor function
     // @ts-ignore
     async function saveDoctor(doctor) {
-        const BASE_URL= process.env.BASE_URL;
+        const BASE_URL= import.meta.env.VITE_BASE_URL;
         const res = await fetch(BASE_URL+"/doctors", {
             method: "POST",
             headers: {

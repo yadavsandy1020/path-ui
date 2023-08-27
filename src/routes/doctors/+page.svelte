@@ -6,8 +6,7 @@
 <script>
 // @ts-nocheck
 
-    export let data
-   
+    export let data;
 
 </script>
 

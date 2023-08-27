@@ -17,7 +17,7 @@
 
     // create function to update editedDoctor data
     async function saveDoctor(doctorData){
-        const BASE_URL= process.env.BASE_URL;
+        const BASE_URL= import.meta.env.VITE_BASE_URL;
       const res = await fetch(`${BASE_URL}/doctors/${data.doctor_id._d}`, {
         method: "PUT",
         headers: {
