@@ -4,8 +4,9 @@ import fetchData from "$lib/api";
 export async function load({ params }) {
   // get patient details from api page params
   try {
+    const BASE_URL = import.meta.env.VITE_BASE_URL;
     const patient = await fetchData(
-      `http://localhost:8080/api/patients/${params.slug}`
+      BASE_URL + `/patients/${params.slug}/${params.page}`
     );
     return {
       body: {

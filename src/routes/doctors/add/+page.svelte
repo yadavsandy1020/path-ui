@@ -20,7 +20,8 @@
     // save doctor function
     // @ts-ignore
     async function saveDoctor(doctor) {
-        const res = await fetch("http://localhost:8080/api/doctors", {
+        const BASE_URL= import.meta.env.VITE_BASE_URL;
+        const res = await fetch(BASE_URL+"/doctors", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -6,8 +6,9 @@
    */
     let doctors = [];
     // onmount get doctors list function
+    const BASE_URL = import.meta.env.VITE_BASE_URL;
     onMount(async () => {
-        const res = await fetch('http://localhost:8080/api/doctors');
+        const res = await fetch(`${BASE_URL}/doctors`);
         doctors = await res.json();
     });
 
@@ -85,7 +86,8 @@
     // function to make post api call to save data to db
     // @ts-ignore
     async function saveCbc(data){
-      const res= await fetch('http://localhost:8080/api/cbcs', {
+        const BASE_URL = import.meta.env.VITE_BASE_URL;
+      const res= await fetch(BASE_URL+"/cbcs", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -97,7 +99,8 @@
     // function to save patient details
     // @ts-ignore
     async function savePatient(data){
-       const res= await fetch('http://localhost:8080/api/patients', {
+        const BASE_URL = import.meta.env.VITE_BASE_URL;
+       const res= await fetch(BASE_URL+"/patients", {
              method: 'POST',
              headers: {
                  'Content-Type': 'application/json'

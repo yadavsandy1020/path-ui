@@ -1,6 +1,7 @@
 // @ts-nocheck
 export async function load({ params }) {
-  const res = await fetch(`http://localhost:8080/api/cbcs/${params.slug}`);
+  const BASE_URL = import.meta.env.VITE_BASE_URL;
+  const res = await fetch(BASE_URL + `/cbcs/${params.slug}/${params.page}`);
   const data = await res.json();
   if (res.ok) {
     return {

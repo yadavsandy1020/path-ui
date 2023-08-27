@@ -3,7 +3,8 @@ import fetchData from "$lib/api";
 export async function load() {
   // get list of doctors from api
   try {
-    const patients = await fetchData("http://localhost:8080/api/patients");
+    const BASE_URL = import.meta.env.VITE_BASE_URL;
+    const patients = await fetchData(BASE_URL + "/patients");
     return {
       body: {
         patients,
