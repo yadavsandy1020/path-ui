@@ -1,3 +1,4 @@
+// @ts-nocheck
 import fetchData from "$lib/api";
 
 export async function load() {

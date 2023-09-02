@@ -1,5 +1,5 @@
+// @ts-nocheck
 import fetchData from "$lib/api";
-
 export async function load() {
   // get list of cbcs from api
   const BASE_URL = import.meta.env.VITE_BASE_URL;

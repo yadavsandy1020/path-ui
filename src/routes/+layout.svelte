@@ -1,46 +1,53 @@
-
-
 <script>
-	import Header from '../components/Header.svelte';
+  import Footer from "../components/Footer.svelte";
+  import Header from "../components/Header.svelte";
 </script>
 
+<svelte:head>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
+</svelte:head>
+
 <div class="app">
-	<Header />
-	<div class="container">
-		<button class="btn btn-primary p-2 m-2" on:click={()=>window.location.href="/doctors"}>Doctors</button>
-		<button class="btn btn-primary p-2 m-2" on:click={()=>window.location.href="/patients"}>Patients</button>
-		<button class="btn btn-primary p-2 m-2" on:click={()=>window.location.href="/cbcs"}>Reports</button>
-		<button class="btn btn-primary p-2 m-2" on:click={()=> window.location.href="/cbcs/add"}>Add New CBC </button>
-	</div>
-	<main>
-		<slot />
-	</main>
-<!-- 
-	<footer>
-        <div class="footer-content">
-            <p>&copy; 2023 Samrath Pathalogy. All rights reserved.</p>
-        </div>
-    </footer> -->
+  <Header />
+
+  <main>
+    <slot />
+  </main>
+  <Footer />
 </div>
 
-<style >
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
+<style>
+  .app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
 
-	footer {
+  footer {
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -48,17 +55,16 @@
     position: sticky;
     bottom: 0;
     width: 100%;
-}
+  }
 
-.footer-content {
+  .footer-content {
     max-width: 1200px;
     margin: 0 auto;
-}
+  }
 
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
-	}
-	
+  @media (min-width: 480px) {
+    footer {
+      padding: 12px 0;
+    }
+  }
 </style>
